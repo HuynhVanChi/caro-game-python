@@ -26,7 +26,6 @@ def danh_dau(Bang, hang,cot, ky_tu):
 
 # Hàm kiểm tra thắng của Bảng 3x3
 def kiem_tra_thang_Bang3x3(Bang,ky_tu):
-    
     """Kiểm tra thắng trên bảng 3x3 và trả về danh sách ô thắng nếu có"""
     kich_thuoc = len(Bang)
     # Hàng
@@ -91,4 +90,3 @@ def kiem_tra_hoa(Bang):
                 return False
     return True
 
-# --====== [Main] ======--
