@@ -1,23 +1,32 @@
 # ======================= QUẢN LÝ CẤU HÌNH (MÀU SẮC, FONT CHỮ, KÍCH THƯỚC) ====================
 # MỤC ĐÍCH: Lưu trữ các hằng số cấu hình (Màu sắc, Font, Kích thước)
 
-# --- Cấu hình Font chữ (Kiểu chữ, Cỡ chữ, Độ đậm) ---
-FONT_TITLE = ("Arial", 20, "bold") # Font tiêu đề lớn ở Menu
-FONT_SUBTITLE = ("Arial", 16, "bold") # Front tiêu đề phụ
-FONT_NORMAL = ("Arial", 12) # Front chữ thường
+# 1. MÀU SẮC (COLORS)
+COLOR_BG = "#f0f0f0"           # Màu nền cửa sổ chính (Xám nhạt cho sang trọng)
+COLOR_BTN_BG = "SystemButtonFace" # Màu nền nút mặc định của Windows
+COLOR_TEXT_X = "red"           # Màu chữ X
+COLOR_TEXT_O = "blue"          # Màu chữ O
+COLOR_LAST_MOVE = "#87CEFA"    # Màu highlight nước vừa đi (Xanh dương nhạt - LightSkyBlue)
+COLOR_WIN_BG = "#FFD700"       # Màu highlight chiến thắng (Vàng kim - Gold)
 
-# Font riêng cho quân cờ (X/O) trên bàn cờ
-FONT_GAME_BIG = ("Arial", 18, "bold")  # Cho bàn 3x3
-FONT_GAME_SMALL = ("Arial", 10, "bold") # Cho bàn 24x24
+# 2. FONT CHỮ (FONTS)
+# Font tiêu đề to (Màn hình menu)
+FONT_TITLE = ("Arial", 28, "bold")
 
-# --- Cấu hình Màu sắc ---
-COLOR_BG_WIN = "yellow"
-COLOR_TEXT_X = "red"
-COLOR_TEXT_O = "blue"
+# Font phụ đề (Các mục nhỏ)
+FONT_SUBTITLE = ("Arial", 16)
 
-COLOR_LAST_MOVE = "cyan" # Màu xanh lơ (hoặc dùng "lightgreen", "pink" tùy bạn)
-COLOR_DEFAULT_BG = "SystemButtonFace" # Màu nền mặc định của nút bấm (Button)
+# Font chữ thường (Status bar, nút bấm thường)
+FONT_NORMAL = ("Arial", 12)
 
-# --- Cấu hình Kích thước nút bấm (Button) ---
-SIZE_BTN_3X3 = {'w': 6, 'h': 3} # Nút to cho bàn nhỏ
-SIZE_BTN_24X24 = {'w': 2, 'h': 1} # Nút nhỏ cho bàn lớn
+# [QUAN TRỌNG] Font chữ trong ô cờ
+# Đây là biến quyết định độ to của ô cờ.
+# - Nếu bạn thấy bàn cờ vẫn nhỏ, hãy tăng số 11 lên 12 hoặc 14.
+# - Nếu bàn cờ bị tràn màn hình, hãy giảm xuống 9 hoặc 10.
+FONT_TEXT_BOARD = ("Arial", 11, "bold")
+
+# 3. KÍCH THƯỚC Ô CỜ (BUTTON SIZE)
+# Lưu ý: Trong Tkinter, Width tính bằng số ký tự, Height tính bằng số dòng.
+# Tỷ lệ 3:1 (Rộng 3, Cao 1) thường giúp nút vuông vắn nhất trên Windows.
+BUTTON_WIDTH = 3
+BUTTON_HEIGHT = 1
